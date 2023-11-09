@@ -26,14 +26,16 @@
         <section class="container">
             <h3>Selecciona un tipo de animal y te mostraremos una imagen 😄 </h3>
         </section>
-        <section class="container">
-            <h3>¡Gatos!</h3>
-            <img src="https://cdn2.thecatapi.com/images/MjA4MzQ4NQ.jpg" alt="">
-        </section>
-        <section class="container">
-            <h3>¡Perros!</h3>
-            <img src="https://cdn2.thedogapi.com/images/AwKd_0wL4.jpg" alt="">
-        </section>
+        <div v-show="favoriteAnimal">
+            <section v-if="isCat" class="container">
+                <h3>¡Gatos!</h3>
+                <img src="https://cdn2.thecatapi.com/images/MjA4MzQ4NQ.jpg" alt="cat">
+            </section>
+            <section v-else class="container">
+                <h3>¡Perros!</h3>
+                <img src="https://cdn2.thedogapi.com/images/AwKd_0wL4.jpg" alt="dog">
+            </section>
+        </div>
 
     </main>
     <script type="module" src="app.js"></script>
